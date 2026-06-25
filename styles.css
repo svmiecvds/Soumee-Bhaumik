@@ -1479,7 +1479,7 @@ body.dark-theme .doc-content h2 {
     }
 
     .theme-toggle img {
-        height: 30px;
+        height: 20px;
     }
 
     /* 2. Hero Sections (index.html & projects.html) */
@@ -1499,8 +1499,8 @@ body.dark-theme .doc-content h2 {
     }
     
     .hero-subtitle {
-        font-size: 1rem;
-        letter-spacing: 2px;
+        font-size: 0.75rem;
+        letter-spacing: 1px;
     }
 
     /* 3. Projects Timeline (projects.html) */
@@ -1510,20 +1510,30 @@ body.dark-theme .doc-content h2 {
         gap: 5vh; /* Uniform spacing */
     }
 
+    body, html {
+        overflow-x: hidden;
+        width: 100%;
+        max-width: 100vw;
+    }
+
     .project-box {
-        width: 80vw;
-        padding: 1.5rem;
-        margin-bottom: 15vh !important; /* Add space back so they appear one after another */
+        width: 75vw;
+        padding: 1.2rem;
+        margin-bottom: 15vh !important;
+        box-sizing: border-box;
     }
     
-    /* Stagger them -_ */
+    /* Stagger them securely -_ */
     .box-1 { margin-left: 0 !important; }
-    .box-2 { margin-left: 5vw !important; }
-    .box-3 { margin-left: 10vw !important; }
-    .box-4 { margin-left: 15vw !important; }
+    .box-2 { margin-left: 4vw !important; }
+    .box-3 { margin-left: 8vw !important; }
+    .box-4 { margin-left: 12vw !important; }
 
     .project-box h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        background: none;
+        -webkit-text-fill-color: initial;
+        color: #ffffff;
     }
 
     /* 4. Achievements Carousel (index.html) */
@@ -1560,6 +1570,7 @@ body.dark-theme .doc-content h2 {
     .pub-carousel {
         width: 85vw;
         max-width: none;
+        height: 55vh; /* Make it longer on mobile to avoid internal scrolling */
     }
 
     /* 6. Galleries (Publications) */
@@ -1570,7 +1581,9 @@ body.dark-theme .doc-content h2 {
     }
     
     .gallery-card {
-        width: 90vw;
+        width: 80vw;
+        max-width: 320px;
+        margin: 0 auto;
     }
 
     .gallery-grid {
