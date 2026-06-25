@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Soumee Bhaumik</title>
+    <!-- Same Google Fonts used in other pages -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- EmailJS script -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // Replace with your public key if different
+            emailjs.init({
+              publicKey: "ZzJ4NstV4aOIf3_Y0",
+            });
+        })();
+    </script>
+</head>
+<body class="contact-page">
+    
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">Soumee Bhaumik</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+            <li>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+                    <img src="assets/dark-mode-btn.png" alt="Theme Toggle" id="theme-toggle-img">
+                </button>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Top Section: Contact Info with Video Background -->
+    <section class="contact-hero-section">
+        <!-- Reusing your contact video -->
+        <video autoplay muted loop id="contact-video-bg">
+            <source src="assets/contact.mp4" type="video/mp4">
+        </video>
+        
+        <div class="contact-hero-overlay">
+            <h1 class="contact-title">Contact Me</h1>
+            <div style="display: flex; flex-direction: column; gap: 0.5rem; align-items: flex-start;">
+                <div class="contact-details">
+                    <a href="tel:+918274014698" class="contact-detail-item">
+                        <svg class="contact-icon-svg" viewBox="0 0 24 24">
+                            <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+                        </svg>
+                        +91 82740 14698
+                    </a>
+                    <a href="mailto:soumeebhaumik@gmail.com" class="contact-detail-item">
+                        <svg class="contact-icon-svg" viewBox="0 0 24 24">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                        soumeebhaumik@gmail.com
+                    </a>
+                </div>
+                <span class="contact-hint" style="margin-left: 0;">(use the little mailbox on the screen to send me a mail.)</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom Section: Leave a Piece of You -->
+    <section class="contact-leave-piece">
+        <div class="piece-container">
+            <!-- Left Side: Spotify Link Image -->
+            <div class="piece-image">
+                <a href="https://open.spotify.com/playlist/4PGv1uzca352FP2yADVw0t?si=Udobn4ybT1SFbHnDNRjiMg&pt=f7fde4943ea49a4854791dd52793990a" target="_blank" rel="noopener noreferrer">
+                    <!-- The user will place the provided image here -->
+                    <img src="assets/contact/vinyl.png" alt="Sanctuary Vinyl Cover">
+                </a>
+            </div>
+            
+            <!-- Right Side: Text Content -->
+            <div class="piece-text">
+                <h2 class="piece-title">Leave a Little Piece of You</h2>
+                <h3 class="piece-subtitle">Share a song, share a story.</h3>
+                <p class="piece-paragraph">
+                    Choose one song that feels like you. A single track and a few words can turn a playlist into a collection of memories, moments, and the people who shared them.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Interactive Mailbox Button (Global) -->
+    <button id="mailbox-btn" class="mailbox-btn" aria-label="Open Mailbox">
+        <img src="assets/mailbox.png" alt="Mailbox">
+    </button>
+
+    <!-- Hidden Mailbox Modal Form -->
+    <div id="mailbox-modal" class="mailbox-modal">
+        <div class="mailbox-content">
+            <span class="close-btn" id="close-modal">&times;</span>
+            <h2 class="fancy-heading">Send a Letter</h2>
+            <form id="contact-form">
+                <input type="text" id="user_name" name="user_name" placeholder="Your Name" required>
+                <input type="email" id="user_email" name="user_email" placeholder="Your Email" required>
+                <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+                <button type="submit" class="submit-btn">Send Letter</button>
+            </form>
+            <div id="form-status" class="form-status"></div>
+        </div>
+    </div>
+
+    <!-- External Script for theme toggle & mailbox -->
+    <script src="contact.js"></script>
+    <script src="mailbox.js"></script>
+</body>
+</html>
