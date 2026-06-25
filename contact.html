@@ -24,19 +24,17 @@
 <body class="contact-page">
     
     <!-- Navigation Bar -->
-    <nav class="navbar">
+        <nav class="navbar">
         <div class="logo">Soumee Bhaumik</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="publications.html">Publications</a></li>
-            <li><a href="contact.html" class="active">Contact</a></li>
-            <li>
-                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
-                    <img src="assets/dark-mode-btn.png" alt="Theme Toggle" id="theme-toggle-img">
-                </button>
-            </li>
-        </ul>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="publications.html">Publications</a>
+            <a href="contact.html" class="active">Contact</a>
+        </div>
+        <button id="theme-toggle" class="theme-toggle">
+            <img src="assets/dark-mode-btn.png" alt="Toggle Theme" id="theme-toggle-img">
+        </button>
     </nav>
 
     <!-- Top Section: Contact Info with Video Background -->
@@ -92,24 +90,37 @@
 
     
 
-    <!-- Interactive Mailbox Button (Global) -->
-    <button id="mailbox-btn" class="mailbox-btn" aria-label="Open Mailbox">
-        <img src="assets/mailbox.png" alt="Mailbox">
+    <!-- Mailbox Contact Button -->
+    <button id="mailbox-btn" class="mailbox-btn" aria-label="Send a message">
+        <img src="assets/mailbox.png" alt="Contact mailbox">
     </button>
 
-    <!-- Hidden Mailbox Modal Form -->
+    <!-- Mailbox Overlay -->
+    <div id="mailbox-overlay" class="mailbox-overlay"></div>
+
+    <!-- Mailbox Contact Modal -->
     <div id="mailbox-modal" class="mailbox-modal">
-        <div class="mailbox-content">
-            <span class="close-btn" id="close-modal">&times;</span>
-            <h2 class="fancy-heading">Send a Letter</h2>
-            <form id="contact-form">
-                <input type="text" id="user_name" name="user_name" placeholder="Your Name" required>
-                <input type="email" id="user_email" name="user_email" placeholder="Your Email" required>
-                <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
-                <button type="submit" class="submit-btn">Send Letter</button>
-            </form>
-            <div id="form-status" class="form-status"></div>
+        <div class="mailbox-header">
+            <h3>Send a Message</h3>
+            <button id="mailbox-close" class="mailbox-close" aria-label="Close">&times;</button>
         </div>
+        <form id="mailbox-form" class="mailbox-form">
+            <div class="form-group">
+                <label for="mail-name">Name</label>
+                <input type="text" id="mail-name" name="from_name" required placeholder="Your name">
+            </div>
+            <div class="form-group">
+                <label for="mail-email">Email</label>
+                <input type="email" id="mail-email" name="from_email" required placeholder="you@example.com">
+            </div>
+            <div class="form-group">
+                <label for="mail-message">Message</label>
+                <textarea id="mail-message" name="message" required placeholder="Write your message..."></textarea>
+            </div>
+            <button type="submit" class="mailbox-submit">Send</button>
+        </form>
+        <div id="mailbox-status" class="mailbox-status"></div>
+    </div>
     </div>
 
     <!-- External Script for theme toggle & mailbox -->

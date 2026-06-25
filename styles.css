@@ -1454,32 +1454,47 @@ body.dark-theme .doc-content h2 {
 @media screen and (max-width: 768px) {
     /* 1. Navbar & Header */
     .navbar {
-        padding: 1rem;
-        flex-direction: column;
-        gap: 10px;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto auto;
+        padding: 1.2rem 1.5rem;
+        gap: 0.3rem 1rem;
+        align-items: center;
     }
     
     .navbar .logo {
-        font-size: 1.3rem;
-    }
-
-    .nav-links {
-        gap: 1rem;
-    }
-
-    .nav-links a {
-        font-size: 0.95rem;
+        grid-column: 1;
+        grid-row: 1;
+        font-size: 1.1rem;
+        text-align: left;
     }
 
     .theme-toggle {
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
+        grid-column: 1;
+        grid-row: 2;
+        position: static;
         margin: 0;
+        justify-self: start;
+        padding: 0;
     }
 
     .theme-toggle img {
-        height: 20px;
+        height: 14px;
+    }
+
+    .nav-links {
+        grid-column: 2;
+        grid-row: 1 / span 2;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-content: center;
+        gap: 0.4rem 0.8rem;
+    }
+
+    .nav-links a {
+        font-size: 0.8rem;
     }
 
     /* 2. Hero Sections (index.html & projects.html) */
