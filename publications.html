@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications - Soumee Bhaumik</title>
+    <meta name="description" content="Publications and research work by Soumee Bhaumik.">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">Portfolio</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="publications.html" class="active">Publications</a></li>
+        </ul>
+        <button id="theme-toggle" class="theme-toggle">
+            <img src="assets/light-mode-btn.png" alt="Toggle Theme" id="theme-toggle-img">
+        </button>
+    </nav>
+
+    <!-- Hero Video Section -->
+    <section class="pub-hero-section">
+        <video id="pub-video-loop" autoplay loop muted playsinline src="assets/publications/publi_light.mp4"></video>
+        <div class="pub-hero-overlay">
+            <h1 class="pub-hero-title">Publications</h1>
+            <div class="pub-dropdown-container">
+                <button class="pub-dropdown-btn" id="pub-dropdown-btn">Select Category <span>▼</span></button>
+                <div class="pub-dropdown-content" id="pub-dropdown-content">
+                    <a href="#" data-filter="all">All Publications</a>
+                    <a href="#" data-filter="technical">Technical/Research Publications</a>
+                    <a href="#" data-filter="creative">Creative Writing Publications</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Slideshow Section -->
+    <section id="pub-slideshow-section" class="pub-dynamic-section">
+        <h2 class="section-title">Selected Works</h2>
+        <main class="pub-carousel-container" style="position: relative; height: 40vh; margin-top: 2rem;">
+            <div class="pub-carousel" id="pub-carousel">
+
+                <!-- CARD 1 — Research Papers -->
+                <div class="pub-card" id="pub-card-0" data-category="technical">
+                    <h3 class="pub-card-tag">Research Papers</h3>
+                    <ul class="pub-card-list">
+                        <li>Presented at <em>International Conference on Sustainable Marketing Delivery Value (SMDV'25)</em></li>
+                        <li>Presented research on Agricultural Drone Technology at <em>International Conference on Sustainable Waste Management (2025)</em></li>
+                    </ul>
+                </div>
+
+                <!-- CARD 2 — Poetry (Part 1) -->
+                <div class="pub-card" id="pub-card-1" data-category="creative">
+                    <h3 class="pub-card-tag">Poetry</h3>
+                    <ul class="pub-card-list">
+                        <li>International Refereed Journal <em>Writers Editors Critics</em>, ISSN 2231-198X</li>
+                        <li>International Journal on Multicultural Literature, ISSN 2231-6248</li>
+                        <li><em>Poetcrit</em>, ISSN 09702830, January 2023</li>
+                    </ul>
+                </div>
+
+                <!-- CARD 3 — Poetry (Part 2) -->
+                <div class="pub-card" id="pub-card-2" data-category="creative">
+                    <h3 class="pub-card-tag">Poetry</h3>
+                    <ul class="pub-card-list">
+                        <li>International Journal of English Literature, Language and Skills (IF 3.235), Vol 11 Issue 4 / Jan 2023 &amp; Vol 15 No. 2 / Jul 2025</li>
+                        <li><em>The Dawn Journal</em> Vol 12 No. 1, Jan–Jun 2023 &amp; Dec 2023 (ISSN 2277-1786)</li>
+                        <li>Delhi Poetry Slam &amp; <em>Pune Research</em>, Vol 11, Issue 1, ISSN 2454-3454</li>
+                    </ul>
+                </div>
+
+                <!-- CARD 4 — Short Stories -->
+                <div class="pub-card" id="pub-card-3" data-category="creative">
+                    <h3 class="pub-card-tag">Short Stories</h3>
+                    <ul class="pub-card-list">
+                        <li><em>Tales of Our Times: An Elixir for the Wise Volume II</em>, ISBN 978-93-5529-202-5</li>
+                        <li><em>Contemporary Global Fiction</em>, ISBN 978-81-967932-7-2 &amp; 10:81-96732-7-8</li>
+                    </ul>
+                </div>
+
+                <!-- CARD 5 — Other Features -->
+                <div class="pub-card" id="pub-card-4" data-category="creative">
+                    <h3 class="pub-card-tag">Other Features</h3>
+                    <ul class="pub-card-list">
+                        <li>Garden High School e-magazine</li>
+                        <li>Delhi Poetry Slam</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Carousel navigation -->
+            <div class="pub-carousel-nav" style="pointer-events: auto; z-index: 5;">
+                <button class="pub-nav-btn pub-nav-prev" id="pub-prev" aria-label="Previous">&larr;</button>
+                <div class="pub-dots" id="pub-dots"></div>
+                <button class="pub-nav-btn pub-nav-next" id="pub-next" aria-label="Next">&rarr;</button>
+            </div>
+        </main>
+    </section>
+
+    <!-- My Gallery Section -->
+    <section id="pub-gallery-section" class="pub-dynamic-section pub-gallery-section">
+        <h2 class="section-title">My Gallery</h2>
+        
+        <div class="gallery-wrapper" id="gallery-wrapper">
+            <!-- Conferences Card -->
+            <div class="gallery-card" data-category="technical">
+                <h3 class="gallery-card-title">Conferences</h3>
+                <div class="gallery-carousel">
+                    <div class="gallery-carousel-track" id="track-conferences">
+                        <div class="gallery-slide"><img src="assets/publications/conf1.jpg" alt="Conference 1" class="gallery-img"></div>
+                        <div class="gallery-slide"><img src="assets/publications/conf2.jpg" alt="Conference 2" class="gallery-img"></div>
+                    </div>
+                    <button class="gallery-nav prev" data-target="track-conferences">&larr;</button>
+                    <button class="gallery-nav next" data-target="track-conferences">&rarr;</button>
+                </div>
+            </div>
+
+            <!-- Poetry Card -->
+            <div class="gallery-card" data-category="creative">
+                <h3 class="gallery-card-title">Poetry</h3>
+                <div class="gallery-carousel">
+                    <div class="gallery-carousel-track" id="track-poetry">
+                        <div class="gallery-slide"><img src="assets/publications/poetry1.jpg" alt="Poetry 1" class="gallery-img"></div>
+                        <div class="gallery-slide"><img src="assets/publications/poetry2.jpg" alt="Poetry 2" class="gallery-img"></div>
+                        <div class="gallery-slide"><img src="assets/publications/poetry3.jpg" alt="Poetry 3" class="gallery-img"></div>
+                        <div class="gallery-slide"><img src="assets/publications/poetry4.jpg" alt="Poetry 4" class="gallery-img"></div>
+                        <div class="gallery-slide">
+                            <div class="poetry-links-card">
+                                <h4>Read some of my works here:</h4>
+                                <a href="https://share.google/QZUerYE0ljhvDIk7y" target="_blank" rel="noopener noreferrer">Delhi Poetry Slam</a>
+                                <a href="https://share.google/cIWGBti7M9fz6o8ev" target="_blank" rel="noopener noreferrer">The Dawn Journal</a>
+                                <a href="https://share.google/IVk73zTAQpeyXKuqD" target="_blank" rel="noopener noreferrer">The Dawn Journal</a>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="gallery-nav prev" data-target="track-poetry">&larr;</button>
+                    <button class="gallery-nav next" data-target="track-poetry">&rarr;</button>
+                </div>
+            </div>
+
+            <!-- Short Stories Card -->
+            <div class="gallery-card" data-category="creative">
+                <h3 class="gallery-card-title">Short Stories</h3>
+                <div class="gallery-carousel">
+                    <div class="gallery-carousel-track" id="track-stories">
+                        <div class="gallery-slide"><img src="assets/publications/story_final1.jpg" alt="Short Story 1" class="gallery-img"></div>
+                        <div class="gallery-slide"><img src="assets/publications/story_final2.jpg" alt="Short Story 2" class="gallery-img"></div>
+                    </div>
+                    <button class="gallery-nav prev" data-target="track-stories">&larr;</button>
+                    <button class="gallery-nav next" data-target="track-stories">&rarr;</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mailbox Contact Button -->
+    <button id="mailbox-btn" class="mailbox-btn" aria-label="Send a message">
+        <img src="assets/mailbox.png" alt="Contact mailbox">
+    </button>
+
+    <!-- Mailbox Overlay -->
+    <div id="mailbox-overlay" class="mailbox-overlay"></div>
+
+    <!-- Mailbox Contact Modal -->
+    <div id="mailbox-modal" class="mailbox-modal">
+        <div class="mailbox-header">
+            <h3>Send a Message</h3>
+            <button id="mailbox-close" class="mailbox-close" aria-label="Close">&times;</button>
+        </div>
+        <form id="mailbox-form" class="mailbox-form">
+            <div class="form-group">
+                <label for="mail-name">Name</label>
+                <input type="text" id="mail-name" name="from_name" required placeholder="Your name">
+            </div>
+            <div class="form-group">
+                <label for="mail-email">Email</label>
+                <input type="email" id="mail-email" name="from_email" required placeholder="you@example.com">
+            </div>
+            <div class="form-group">
+                <label for="mail-message">Message</label>
+                <textarea id="mail-message" name="message" required placeholder="Write your message..."></textarea>
+            </div>
+            <button type="submit" class="mailbox-submit">Send</button>
+        </form>
+        <div id="mailbox-status" class="mailbox-status"></div>
+    </div>
+
+    <script src="publications.js"></script>
+    <script src="mailbox.js"></script>
+</body>
+</html>

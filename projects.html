@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">Portfolio</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
+            <li><a href="publications.html">Publications</a></li>
+        </ul>
+        <button id="theme-toggle" class="theme-toggle">
+            <img src="assets/light-mode-btn.png" alt="Toggle Theme" id="theme-toggle-img">
+        </button>
+    </nav>
+
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- We need a tall container to make the page scrollable -->
+    <main class="scroll-container">
+        <div class="projects-list">
+            <div class="project-box box-1">
+                <h2>ZEPHVR</h2>
+                <p>An AI-powered learning companion that transforms notes into interactive study materials, tracks focus, and gamifies learning through a virtual desk companion.</p>
+            </div>
+            <div class="project-box box-2">
+                <h2>SEED2SHELF</h2>
+                <p>A blockchain-enabled agritech platform connecting farmers directly with buyers through transparent, traceable, and efficient supply chain management.</p>
+                <a href="https://github.com/svmiecvds/SEED2SHELF.git" target="_blank" rel="noopener noreferrer" class="project-visit-btn">Visit</a>
+            </div>
+            <div class="project-box box-3">
+                <h2>Agricultural Drone</h2>
+                <p>An AI-powered precision agriculture system for cattle counting, crop monitoring, disease detection, and pest surveillance using aerial imaging and computer vision.</p>
+                <a href="project_drone.html" class="project-visit-btn">See Project</a>
+            </div>
+            <div class="project-box box-4">
+                <h2>Virtual Gift Shop</h2>
+                <p>A creative web platform where users design personalized digital gifts using hand-drawn illustrations and share them through interactive virtual experiences.</p>
+                <a href="https://virtual-gift-shop.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-visit-btn">Visit</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Mailbox Contact Button -->
+    <button id="mailbox-btn" class="mailbox-btn" aria-label="Send a message">
+        <img src="assets/mailbox.png" alt="Contact mailbox">
+    </button>
+
+    <!-- Mailbox Overlay -->
+    <div id="mailbox-overlay" class="mailbox-overlay"></div>
+
+    <!-- Mailbox Contact Modal -->
+    <div id="mailbox-modal" class="mailbox-modal">
+        <div class="mailbox-header">
+            <h3>Send a Message</h3>
+            <button id="mailbox-close" class="mailbox-close" aria-label="Close">&times;</button>
+        </div>
+        <form id="mailbox-form" class="mailbox-form">
+            <div class="form-group">
+                <label for="mail-name">Name</label>
+                <input type="text" id="mail-name" name="from_name" required placeholder="Your name">
+            </div>
+            <div class="form-group">
+                <label for="mail-email">Email</label>
+                <input type="email" id="mail-email" name="from_email" required placeholder="you@example.com">
+            </div>
+            <div class="form-group">
+                <label for="mail-message">Message</label>
+                <textarea id="mail-message" name="message" required placeholder="Write your message..."></textarea>
+            </div>
+            <button type="submit" class="mailbox-submit">Send</button>
+        </form>
+        <div id="mailbox-status" class="mailbox-status"></div>
+    </div>
+
+    <script src="projects.js"></script>
+    <script src="mailbox.js"></script>
+</body>
+
+</html>

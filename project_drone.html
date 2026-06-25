@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIFSS Drone Project</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="project-doc-page">
+    <nav class="navbar">
+        <div class="logo">Portfolio</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
+            <li><a href="publications.html">Publications</a></li>
+        </ul>
+        <button id="theme-toggle" class="theme-toggle">
+            <img src="assets/light-mode-btn.png" alt="Toggle Theme" id="theme-toggle-img">
+        </button>
+    </nav>
+
+    <!-- Background Video for Drone Page -->
+    <div class="drone-bg-video-container">
+        <video id="drone-bg-video" class="drone-bg-video" autoplay loop muted playsinline>
+            <source src="assets/drone_light.mp4" type="video/mp4">
+        </video>
+    </div>
+
+
+    <main class="project-doc-container">
+        <div class="doc-slideshow" id="drone-slideshow">
+            <div class="doc-slideshow-track" id="drone-track">
+                <div class="doc-slide"><img src="assets/projects/drone/drone1.jpg" alt="Drone View 1"></div>
+                <div class="doc-slide"><img src="assets/projects/drone/drone2.jpg" alt="Drone View 2"></div>
+                <div class="doc-slide"><img src="assets/projects/drone/drone3.jpg" alt="Drone View 3"></div>
+            </div>
+        </div>
+        
+        <div class="doc-content">
+            <h1>Sustainable Intelligent Farm Surveillance System (SIFSS)</h1>
+<h2>Problem Statement</h2>
+<p>Agriculture is one of the most critical sectors for global food security, yet farmers continue to face numerous challenges that reduce crop productivity and increase production costs. Traditional farming practices often rely on manual field inspections, which are time-consuming, labour-intensive, and unable to provide continuous monitoring. Crop diseases, pest infestations, nutrient deficiencies, and water stress frequently go undetected until visible symptoms appear, by which time significant damage has already occurred. Additionally, the excessive use of fertilizers, pesticides, and irrigation not only increases operational costs but also causes environmental degradation and soil quality deterioration. There is therefore a growing need for an intelligent, automated, and sustainable farming solution capable of continuously monitoring crop and soil conditions while providing timely recommendations for informed decision-making.</p>
+<h2>Objectives of the Project</h2>
+<p>The primary objective of the Sustainable Intelligent Farm Surveillance System (SIFSS) is to develop an AI-powered precision agriculture platform that enables real-time monitoring of crops and soil health. The project aims to integrate aerial drone imaging with a Distributed Environmental Wireless (DEW) sensor network to collect comprehensive environmental and crop-related data. Using Artificial Intelligence and Machine Learning algorithms, the system identifies crop diseases, predicts pest outbreaks, detects water stress, and provides personalized treatment recommendations. Furthermore, the system seeks to optimize irrigation, fertilizer usage, and pesticide application, thereby improving agricultural productivity while promoting environmentally sustainable farming practices. The project also emphasizes accessibility by providing farmers with an intuitive dashboard that simplifies complex agricultural data into actionable insights.</p>
+<h2>Methodology</h2>
+<p>The proposed system operates through a multi-stage workflow. An aerial drone equipped with RGB, multispectral, and infrared cameras periodically captures high-resolution images of agricultural fields to assess vegetation health, identify disease symptoms, and detect water stress. Simultaneously, a network of low-power DEW sensor nodes embedded in the soil continuously measures key environmental parameters such as soil moisture, temperature, pH, and nutrient concentration. Both drone imagery and sensor readings are transmitted to a cloud-based platform where they are integrated and preprocessed. An AI Analytics Engine then applies machine learning and computer vision techniques to analyze the collected data, detect anomalies, forecast pest infestations, recommend suitable treatments, and generate crop management strategies. The processed information is displayed through an interactive dashboard featuring maps, visual analytics, and real-time alerts, enabling farmers to make timely and informed decisions.</p>
+<h2>Novelty of the Project</h2>
+<p>The uniqueness of SIFSS lies in its integrated approach to precision agriculture. Unlike conventional systems that rely solely on drone imaging or individual soil sensors, this project combines aerial surveillance, IoT-based environmental sensing, and AI-driven analytics into a single intelligent platform. The inclusion of multispectral and infrared imaging enables early detection of crop stress before visible symptoms emerge, while the DEW sensor network provides continuous ground-level monitoring for enhanced accuracy. By fusing these multiple sources of information, the system delivers highly reliable recommendations tailored to field-specific conditions. Its user-friendly interface ensures that even farmers with limited technical knowledge can easily understand and utilize the insights generated by the system, making advanced precision farming technologies more accessible.</p>
+<h2>How the Project Solves the Issue</h2>
+<p>The Sustainable Intelligent Farm Surveillance System addresses major agricultural challenges through continuous monitoring and intelligent automation. Early detection of crop diseases and pest infestations enables timely intervention, minimizing crop losses and reducing the need for excessive pesticide usage. Real-time soil monitoring helps optimize irrigation schedules and fertilizer application, preventing water wastage and nutrient depletion. AI-generated recommendations allow farmers to make data-driven decisions instead of relying solely on experience or manual observation. By automating field surveillance and providing instant alerts, the system significantly reduces manual labour while improving crop quality and overall farm productivity. Additionally, efficient resource utilization lowers production costs and supports environmentally sustainable agricultural practices.</p>
+<h2>Conclusion</h2>
+<p>The Sustainable Intelligent Farm Surveillance System presents a comprehensive solution for modern precision agriculture by integrating drone technology, IoT sensor networks, cloud computing, and Artificial Intelligence into a unified platform. Through continuous monitoring, intelligent data analysis, and automated decision support, the system enables early problem detection, efficient resource management, and sustainable farming practices. By improving crop yield, reducing operational costs, minimizing environmental impact, and simplifying agricultural decision-making, SIFSS has the potential to transform traditional farming into a smarter, more productive, and environmentally responsible agricultural ecosystem. The project demonstrates how emerging technologies can be effectively combined to address real-world farming challenges while contributing to long-term food security and sustainable development.</p>
+        </div>
+    </main>
+
+    <script src="drone_project.js"></script>
+</body>
+
+</html>
