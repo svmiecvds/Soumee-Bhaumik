@@ -748,23 +748,21 @@ body.dark-theme .section-title {
 }
 
 .pub-carousel {
-    position: relative;
+    display: grid;
     width: 38vw;
     max-width: 520px;
     min-width: 300px;
-    height: 32vh;
     pointer-events: auto;
 }
 
 .pub-card {
-    position: absolute;
-    inset: 0;
+    grid-area: 1 / 1;
     padding: 1.5rem 2rem;
     opacity: 0;
     transform: translateY(12px);
     transition: opacity 0.5s ease, transform 0.5s ease;
     pointer-events: none;
-    overflow-y: auto;
+    overflow-y: visible;
     font-family: "Times New Roman", Times, serif;
     color: #3e2723;
     text-align: center;
@@ -1582,7 +1580,6 @@ body.dark-theme .doc-content h2 {
     .pub-carousel {
         width: 85vw;
         max-width: none;
-        height: 55vh; /* Make it longer on mobile to avoid internal scrolling */
     }
 
     /* 6. Galleries (Publications) */
