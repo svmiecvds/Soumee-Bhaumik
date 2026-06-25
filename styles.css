@@ -1551,8 +1551,20 @@ body.dark-theme .doc-content h2 {
     }
 
     .glass-card {
-        width: 80vw;
-        padding: 1.5rem;
+        width: 65vw;
+        max-width: 280px;
+        padding: 1.2rem;
+    }
+    
+    .glass-card .card-img,
+    .glass-card .card-img-placeholder {
+        width: 140px;
+        height: 140px;
+        margin-bottom: 1rem;
+    }
+    
+    .glass-card p {
+        font-size: 0.9rem;
     }
 
     /* 5. Publications Page */
