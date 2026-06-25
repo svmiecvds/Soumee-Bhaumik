@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
         bgVideo.src = isDarkMode ? 'assets/contact_dark.mp4' : 'assets/contact_light.mp4';
     }
     if (themeToggleImg) {
-        themeToggleImg.src = isDarkMode ? 'assets/light-mode-btn.png' : 'assets/dark-mode-btn.png';
+        themeToggleImg.src = isDarkMode ? 'assets/dark-mode-btn.png' : 'assets/light-mode-btn.png';
     }
     
     // Toggle Event Listener
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // Update button image
             if (themeToggleImg) {
-                themeToggleImg.src = isDarkMode ? 'assets/light-mode-btn.png' : 'assets/dark-mode-btn.png';
+                themeToggleImg.src = isDarkMode ? 'assets/dark-mode-btn.png' : 'assets/light-mode-btn.png';
             }
             
             // Update background video with fade effect
