@@ -50,8 +50,8 @@
         submitBtn.disabled = true;
 
         const templateParams = {
-            from_name: mailboxForm.querySelector('#mail-name').value,
-            from_email: mailboxForm.querySelector('#mail-email').value,
+            name: mailboxForm.querySelector('#mail-name').value,
+            email: mailboxForm.querySelector('#mail-email').value,
             message: mailboxForm.querySelector('#mail-message').value,
         };
 
