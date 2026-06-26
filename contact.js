@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Set initial video and button image based on current theme
     if (bgVideo) {
         bgVideo.src = isDarkMode ? 'assets/contact_dark.mp4' : 'assets/contact_light.mp4';
+        bgVideo.play().catch(e => console.log('Autoplay prevented:', e));
     }
     if (themeToggleImg) {
         themeToggleImg.src = isDarkMode ? 'assets/dark-mode-btn.png' : 'assets/light-mode-btn.png';

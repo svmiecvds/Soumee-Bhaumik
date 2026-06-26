@@ -23,9 +23,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Set initial video and button image based on current theme
     if (bgVideo) {
         bgVideo.src = isDarkMode ? 'assets/hero/hero_dark.mp4' : 'assets/hero/hero_light.mp4';
+        bgVideo.play().catch(e => console.log("Video autoplay blocked:", e));
     }
     if (introVideo) {
         introVideo.src = isDarkMode ? 'assets/intro_dark.mp4' : 'assets/intro_light.mp4';
+        introVideo.play().catch(e => console.log("Video autoplay blocked:", e));
     }
     if (themeToggleImg) {
         themeToggleImg.src = isDarkMode ? 'assets/dark-mode-btn.png' : 'assets/light-mode-btn.png';
