@@ -168,7 +168,7 @@ body.dark-theme .project-visit-btn {
     -webkit-tap-highlight-color: transparent;
 }
 
-.nav-links a:hover, .nav-links a.active {
+.nav-links a:hover, .nav-links a:active, .nav-links a.active {
     color: #8A9A5B; /* Sage green */
     font-weight: 600;
 }
@@ -209,6 +209,7 @@ body.dark-theme .nav-links a {
 }
 
 body.dark-theme .nav-links a:hover,
+body.dark-theme .nav-links a:active,
 body.dark-theme .nav-links a.active {
     color: #A3B18A;
 }
